@@ -60,23 +60,27 @@ class basicMovement:
 def forword():
     print("forword")
     print("Moving Forword")
-    basicMovement.left_forward()
-    basicMovement.right_forward()
+    basicMovement.left_forward(x)
+    basicMovement.right_forward(x)
+    basicMovement.stop()
 
 def backword():
     print("Moving Backword")
-    basicMovement.left_backword()
-    basicMovement.right_backword()
+    basicMovement.left_backword(x)
+    basicMovement.right_backword(x)
+    basicMovement.stop()
 
 def left():
     print("Moving Left")
-    basicMovement.right_forward()
-    basicMovement.right_backword()
+    basicMovement.right_forward(x)
+    basicMovement.right_backword(x)
+    basicMovement.stop()
 
 def right():
     print("Moving Right")
-    basicMovement.left_forward()
-    basicMovement.left_backword()
+    basicMovement.left_forward(x)
+    basicMovement.left_backword(x)
+    basicMovement.stop()
 
 def up():
     print("UP")
