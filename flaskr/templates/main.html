@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Dragon Bot</title>
+  </head>
+  <body>
+    <h1 class="fs-6 text-indigo-500 my-3 mx-3">Dragon Bot</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div id="joy3Div" style="width:200px;height: 700px;"></div>
+                <div style="position:fixed;bottom:125px;left:750px;">
+                    X :<input id="joy3X" type="text" /></br>
+                    Y :<input id="joy3Y" type="text" />
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="d-flex flex-column justify-content-around">
+                    <div class="p-2 align-self-center">
+                        <a class="btn btn-danger py-5 px-5 mb-5 rounded-circle" id="shoot">SHOOT</a>
+                    </div>
+                    <div class="p-2 align-self-center">
+                        <a class="btn btn-primary px-4" id="up">UP</a>
+                    </div>
+                    <div class="p-2 align-self-center">
+                        <a class="btn btn-primary" id="openclose">Open / Close</a>
+                    </div>
+                    <div class="p-2 align-self-center">
+                        <a class="btn btn-primary" id="down">DOWN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../static/joy.js"></script>
+    <script src="../static/keyboard-control.js"></script>
+    
+    <script>
+        var joy3Param = { "title": "joystick3" };
+        var Joy3 = new JoyStick('joy3Div', joy3Param);
+
+        var joy3X = document.getElementById("joy3X");
+        var joy3Y = document.getElementById("joy3Y");
+        
+        goodgood = 0;
+
+        var x = console.log(goodgood);
+
+        setInterval(function(){ joy3X.value=Joy3.GetX(); }, 50);
+        setInterval(function(){ joy3Y.value=Joy3.GetY(); }, 50);
+
+        setInterval(function(){ goodgood.value=Joy3.GetY(); }, 50);
+
+        
+    </script>
+
+    <script>
+            $(function() {
+            $('a#up').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/up',
+                    function(data) {
+                        return(X)
+                });
+                return false;
+            });
+            $('a#down').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/down',
+                    function(data) {
+                //do nothing
+                });
+                return false;
+            });
+            $('a#left').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/left',
+                    function(data) {
+                //do nothing
+                });
+                return false;
+            });
+            $('a#right').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/right',
+                    function(data) {
+                //do nothing
+                });
+                return false;
+            });
+            $('a#up').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/up',
+                    function(data) {
+                //do nothing
+                });
+                return false;
+            });
+            $('a#down').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/down',
+                    function(data) {
+                //do nothing
+                });
+                return false;
+            });
+            $('a#openclose').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/openclose',
+                    function(data) {
+                //do nothing
+                });
+                return false;
+            });
+            $('a#shoot').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/shoot',
+                    function(data) {
+                //do nothing
+                });
+                return false;
+            });
+            });
+    </script>
+
+  </body>
+</html>
