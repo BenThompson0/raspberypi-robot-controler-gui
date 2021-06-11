@@ -3,6 +3,7 @@ from flask import render_template
 
 # Importing in drive.py from robot folder
 from robot import drive
+#import test
 
 X = 0
 Y = 0
@@ -29,49 +30,50 @@ def X():
 '''
 
 # Move robot FORWORD
-@app.route('/api/forword', methods=['GET', 'POST'])
+@app.route('/api/forword')
 def forword():
-    return drive.forword()
+    drive.forword()
+    return 'forword' 
 
 # Move robot BACKWORDS
 @app.route('/api/backwords', methods=['GET', 'POST'])
 def backwords():
     #drive.backwords()
-    return()
+    return 'backword'
 
 # Move robot LEFT
 @app.route('/api/left', methods=['GET', 'POST'])
 def left():
     #drive.left()
-    return()
+    return 'left'
 
 # Move robot RIGHT
 @app.route('/api/right', methods=['GET', 'POST'])
 def right():
     #drive.right()
-    return()
+    return'right'
 
 
 # Move robot UP
 @app.route('/api/up', methods=['GET', 'POST'])
 def up():
-    drive.up()
-    return()
+    #drive.up()
+    return 'up'
 
 # Move robot DOWN
 @app.route('/api/down', methods=['GET', 'POST'])
 def down():
     #drive.down()
-    return()
+    return 'down'
 
 # Robot Opening/closing
 @app.route('/api/openclose', methods=['GET', 'POST'])
 def openclose():
     #drive.open_close()
-    return()
+    return 'open/closed'
 
 # Make robot SHOOT
 @app.route('/api/shoot', methods=['GET', 'POST'])
 def shoot():
     #drive.shoot()
-    return()
+    return 'shoot'

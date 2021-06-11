@@ -7,7 +7,7 @@ $(window).keypress(function (e) {
         e.preventDefault()
         $.getJSON('/api/forword',
             function(data) {
-                return(X)
+                return(x = 5)
         });
         return false;
     }
