@@ -10,7 +10,7 @@ GPIO.setup(leftForward, GPIO.OUT)
 GPIO.setup(leftBackward, GPIO.OUT)
 GPIO.setup(rightForward, GPIO.OUT)
 GPIO.setup(rightBackward, GPIO.OUT)
-''''
+'''
 
 y = 0
 x = 0
